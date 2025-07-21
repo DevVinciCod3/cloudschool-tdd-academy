@@ -45,6 +45,7 @@ class TodoExercisesTest {
         nala = new Animal("Nala", "Lion", 160.0, LocalDate.of(2020, 6, 20), "Healthy");
         timon = new Animal("Timon", "Meerkat", 2.5, LocalDate.of(2021, 3, 10), "Healthy");
         zooManager = new ZooManager(animalService, notificationService);
+
     }
 
     // ========== MOCK EXERCISES ==========
@@ -88,19 +89,13 @@ class TodoExercisesTest {
     @Test
     @DisplayName("TODO: Stub Exercise 1 - Should calculate average weight with stub data")
     void shouldCalculateAverageWeightWithStubData() {
-        // TODO: Complete this test using stubs
-        // 1. Create stub data: simba (180.5), nala (160.0), timon (2.5)
-        // 2. Mock animalRepository.findAll() to return this stub data
-        // 3. Call animalService.getAverageWeight()
-        // 4. Assert the average is 114.33 (with 0.01 precision)
-        
-        // Your code here:
-        // List<Animal> animals = Arrays.asList(simba, nala, timon);
-        // when(animalRepository.findAll()).thenReturn(animals);
-        //
-        // double averageWeight = animalService.getAverageWeight();
-        //
-        // assertEquals(114.33, averageWeight, 0.01);
+
+         List<Animal> animals = Arrays.asList(simba, nala, timon);
+         when(animalRepository.findAll()).thenReturn(animals);
+
+         double averageWeight = animalService.getAverageWeight();
+
+         assertEquals(114.33, averageWeight, 0.01);
     }
 
     @Test
@@ -228,4 +223,6 @@ class TodoExercisesTest {
          );
          verify(animalRepository, times(1)).findById(1L);
     }
+
+
 } 
