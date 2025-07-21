@@ -12,6 +12,7 @@ class PersonTest {
     @DisplayName("Should create a valid Person with all required fields")
     void shouldCreateValidPerson() {
         // TODO: Complete this test
+
         // 1. Create test data with all required fields
         // 2. Create a Person object with the test data
         // 3. Assert that the person is not null
